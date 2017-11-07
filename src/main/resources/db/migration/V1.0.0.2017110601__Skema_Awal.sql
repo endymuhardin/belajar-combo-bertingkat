@@ -39,6 +39,7 @@ CREATE TABLE registrasi (
   password  VARCHAR(255) NOT NULL,
   nama      VARCHAR(255) NOT NULL,
   alamat    VARCHAR(255) NOT NULL,
-  kelurahan VARCHAR(255) NOT NULL,
-  PRIMARY KEY (id)
+  id_kelurahan VARCHAR(36) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (id_kelurahan) REFERENCES kelurahan(id)
 );

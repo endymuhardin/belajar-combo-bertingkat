@@ -3,9 +3,7 @@ package com.muhardin.endy.belajar.combobertingkat.entity;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -29,6 +27,8 @@ public class Registrasi {
     @NotNull @NotEmpty
     private String alamat;
 
-    @NotNull @NotEmpty
-    private String kelurahan;
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "id_kelurahan")
+    private Kelurahan kelurahan;
 }
