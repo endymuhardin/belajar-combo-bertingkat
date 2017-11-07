@@ -32,3 +32,13 @@ CREATE TABLE kelurahan (
   UNIQUE (nama),
   FOREIGN KEY (id_kecamatan) REFERENCES kecamatan (id)
 );
+
+CREATE TABLE registrasi (
+  id        VARCHAR(36),
+  email     VARCHAR(255) NOT NULL,
+  password  VARCHAR(255) NOT NULL,
+  nama      VARCHAR(255) NOT NULL,
+  alamat    VARCHAR(255) NOT NULL,
+  kelurahan VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);

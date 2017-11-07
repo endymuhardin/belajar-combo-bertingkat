@@ -19,6 +19,7 @@ $(document).ready(function(){
     var inputKecamatan = $("#kecamatan");
     var inputKelurahan = $("#kelurahan");
     var inputKodepos = $("#kodepos");
+    var inputHiddenKelurahan = $("input[name=kelurahan]");
 
     var resetInput = function(inputField){
         inputField.val('');
@@ -91,6 +92,7 @@ $(document).ready(function(){
         afterSelect: function(pilihan){
             kelurahan = pilihan;
             inputKodepos.val(kelurahan.kodepos);
+            inputHiddenKelurahan.val(kelurahan.id);
         }
     });
 });
