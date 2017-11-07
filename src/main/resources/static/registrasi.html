@@ -12,13 +12,16 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
+    <!-- BosNaufal AutoComplete -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/BosNaufal/vue2-autocomplete/master/dist/style/vue2-autocomplete.css" crossorigin="anonymous">
+
     <!-- Custom styles for this template -->
     <link href="css/aplikasi.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="container">
+<div class="container" id="aplikasi-registrasi">
     <header class="header clearfix">
         <nav>
             <ul class="nav nav-pills float-right">
@@ -67,10 +70,15 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="provinsi">Provinsi</label>
-                            <select id="provinsi" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
+                            <autocomplete
+                                    id="provinsi"
+                                    url="/api/provinsi"
+                                    param="nama"
+                                    anchor="nama"
+                                    label="nama"
+                                    :on-select="selectProvinsi"
+                                    :debounce="2000">
+                            </autocomplete>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="kabupatenKota">Kabupaten/Kota</label>
@@ -113,5 +121,12 @@
     </footer>
 
 </div> <!-- /container -->
+
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.rawgit.com/BosNaufal/vue2-autocomplete/master/dist/vue2-autocomplete.js"></script>
+<script src="js/aplikasi.js"></script>
+
 </body>
 </html>
