@@ -27,6 +27,7 @@ CREATE TABLE kelurahan (
   id           VARCHAR(36),
   id_kecamatan VARCHAR(36)  NOT NULL,
   nama         VARCHAR(255) NOT NULL,
+  kodepos      VARCHAR(10)  NOT NULL,
   PRIMARY KEY (id),
   UNIQUE (nama),
   FOREIGN KEY (id_kecamatan) REFERENCES kecamatan (id)

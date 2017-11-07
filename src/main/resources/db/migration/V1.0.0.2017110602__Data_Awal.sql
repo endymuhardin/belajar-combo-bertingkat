@@ -16,7 +16,7 @@ INSERT INTO kecamatan (id, id_kabupaten_kota, nama) VALUES ('wonokromo', 'suraba
 INSERT INTO kecamatan (id, id_kabupaten_kota, nama) VALUES ('mojosari', 'mojokerto', 'Mojosari');
 INSERT INTO kecamatan (id, id_kabupaten_kota, nama) VALUES ('trowulan', 'mojokerto', 'Trowulan');
 
-INSERT INTO kelurahan (id, id_kecamatan, nama) VALUES ('tengah', 'cibinong', 'Tengah');
-INSERT INTO kelurahan (id, id_kecamatan, nama) VALUES ('pakansari', 'cibinong', 'Pakansari');
-INSERT INTO kelurahan (id, id_kecamatan, nama) VALUES ('ciangsana', 'gnputri', 'Ciangsana');
-INSERT INTO kelurahan (id, id_kecamatan, nama) VALUES ('cikeas', 'gnputri', 'Cikeas');
+INSERT INTO kelurahan (id, id_kecamatan, nama, kodepos) VALUES ('tengah', 'cibinong', 'Tengah', '16914');
+INSERT INTO kelurahan (id, id_kecamatan, nama, kodepos) VALUES ('pakansari', 'cibinong', 'Pakansari', '16915');
+INSERT INTO kelurahan (id, id_kecamatan, nama, kodepos) VALUES ('ciangsana', 'gnputri', 'Ciangsana', '16968');
+INSERT INTO kelurahan (id, id_kecamatan, nama, kodepos) VALUES ('cikeas', 'gnputri', 'Cikeas', '16966');

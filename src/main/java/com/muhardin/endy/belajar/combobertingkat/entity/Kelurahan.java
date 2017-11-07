@@ -28,4 +28,9 @@ public class Kelurahan {
     @NotNull
     @NotEmpty
     private String nama;
+
+    @NotNull
+    @NotEmpty
+    private String kodepos;
+
 }
